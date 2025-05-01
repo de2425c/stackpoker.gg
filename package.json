@@ -1,0 +1,9 @@
+{
+  "name": "stackpoker-landing",
+  "version": "1.0.0",
+  "description": "StackPoker.gg landing page",
+  "private": true,
+  "scripts": {
+    "build": "./build.sh"
+  }
+} 
