@@ -4,9 +4,17 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "parser_backend/main.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/parser_backend/main.py"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.js"
