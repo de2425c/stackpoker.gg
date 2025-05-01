@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackPoker.gg - Coming Soon</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♠️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #3b82f6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #94a3b8;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+        .logo {
+            display: inline-block;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .card-symbols {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .email-form {
+            margin: 2.5rem 0;
+        }
+        .input-group {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 9999px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .email-input {
+            flex-grow: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            background-color: #1e293b;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            outline: none;
+        }
+        .email-input::placeholder {
+            color: #64748b;
+        }
+        .submit-btn {
+            padding: 1rem 2rem;
+            border: none;
+            background: linear-gradient(to right, #3b82f6, #2dd4bf);
+            color: white;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+        footer {
+            margin-top: 4rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1.25rem;
+            }
+            .input-group {
+                flex-direction: column;
+                border-radius: 12px;
+            }
+            .email-input {
+                padding: 1rem;
+                border-radius: 12px 12px 0 0;
+            }
+            .submit-btn {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="card-symbols">
+                <span>♠️</span>
+                <span>♥️</span>
+                <span>♣️</span>
+                <span>♦️</span>
+            </div>
+            <div class="logo-text">StackPoker.gg</div>
+        </div>
+        
+        <h1>Coming Soon</h1>
+        <div class="tagline">The future of poker is almost here</div>
+        <p>We're building a next-generation poker platform designed for serious players. Join our waitlist to be the first to know when we launch.</p>
+        
+        <div class="email-form">
+            <form id="notify-form">
+                <div class="input-group">
+                    <input type="email" class="email-input" placeholder="Enter your email" required>
+                    <button type="submit" class="submit-btn">Get Notified</button>
+                </div>
+            </form>
+        </div>
+        
+        <footer>
+            &copy; 2025 StackPoker.gg - All rights reserved
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('notify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`Thanks! We'll notify ${email} when we launch.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
